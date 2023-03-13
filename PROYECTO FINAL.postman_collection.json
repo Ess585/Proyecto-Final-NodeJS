@@ -1,0 +1,355 @@
+{
+	"info": {
+		"_postman_id": "01633c53-5277-4b93-a3fc-772285bc3272",
+		"name": "PROYECTO FINAL",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "USUARIO",
+			"item": [
+				{
+					"name": "CREAR USUARIO",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "username",
+									"value": "Edgar ",
+									"type": "default"
+								},
+								{
+									"key": "email",
+									"value": "egomez-2020@kinal.edu.gt",
+									"type": "default"
+								},
+								{
+									"key": "password",
+									"value": "51974290",
+									"type": "default"
+								},
+								{
+									"key": "rol",
+									"value": "ADMIN",
+									"type": "default"
+								}
+							]
+						},
+						"url": "localhost:3001/api/create-user"
+					},
+					"response": []
+				},
+				{
+					"name": "EDITAR USUARIO",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "x-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1SWQiOiI2NDBkNjIzODY4NzYwN2I5YjIwMmFjYjAiLCJ1c2VybmFtZSI6IkVkZ2FyICIsImVtYWlsIjoiZWdvbWV6LTIwMjBAa2luYWwuZWR1Lmd0IiwiaWF0IjoxNjc4NTk4NzEyLCJleHAiOjE2NzkyMDM1MTJ9.DfJew-8xeWii8oBtV8IaAsHvOzTZ7c_zfy3i35bUlD0",
+								"type": "default",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "username",
+									"value": "Juan",
+									"type": "default"
+								},
+								{
+									"key": "email",
+									"value": "egarcia@kinal.edu.gt",
+									"type": "default"
+								},
+								{
+									"key": "password",
+									"value": "12345678",
+									"type": "default"
+								},
+								{
+									"key": "rol",
+									"value": "ADMIN",
+									"type": "default"
+								}
+							]
+						},
+						"url": "localhost:3001/api/update-user/640d6238687607b9b202acb0"
+					},
+					"response": []
+				},
+				{
+					"name": "LISTAR USUARIO",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-token",
+								"value": "",
+								"type": "default",
+								"disabled": true
+							}
+						],
+						"url": "localhost:3001/api/list-users"
+					},
+					"response": []
+				},
+				{
+					"name": "LOGIN USUARIO",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-token",
+								"value": "",
+								"type": "default",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "email",
+									"value": "egarcia@kinal.edu.gt",
+									"type": "default"
+								},
+								{
+									"key": "password",
+									"value": "12345678",
+									"type": "default"
+								}
+							]
+						},
+						"url": "localhost:3001/api/login-user"
+					},
+					"response": []
+				},
+				{
+					"name": "ELIMINAR USUARIO",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "localhost:3001/api/delete-user/640d6238687607b9b202acb0"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "CATEGORIA",
+			"item": [
+				{
+					"name": "CREAR CATEGORIA",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "nameCategory",
+									"value": "Herramientas",
+									"type": "default"
+								},
+								{
+									"key": "description",
+									"value": "Utencilios de primera mano",
+									"type": "default"
+								}
+							]
+						},
+						"url": "localhost:3001/api/create-category"
+					},
+					"response": []
+				},
+				{
+					"name": "EDITAR CATEGORIA",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "x-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1SWQiOiI2NDBkNjQxNzExZmQyYmU0MzBjMTBhZGQiLCJ1c2VybmFtZSI6IkVkZ2FyICIsImVtYWlsIjoiZWdvbWV6LTIwMjBAa2luYWwuZWR1Lmd0IiwiaWF0IjoxNjc4NTk5MTkxLCJleHAiOjE2NzkyMDM5OTF9.wHofmht1OSrIOtZiPXhU3Yx2SPOhhGxE-76PDO3xBYg",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "description",
+									"value": "Herramientas de primera clase",
+									"type": "default"
+								}
+							]
+						},
+						"url": "localhost:3001/api/update-category/640d65a92f9fff645f0add77"
+					},
+					"response": []
+				},
+				{
+					"name": "LISTAR CATEGORIAS",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1SWQiOiI2NDBkNjQxNzExZmQyYmU0MzBjMTBhZGQiLCJ1c2VybmFtZSI6IkVkZ2FyICIsImVtYWlsIjoiZWdvbWV6LTIwMjBAa2luYWwuZWR1Lmd0IiwiaWF0IjoxNjc4NTk5MTkxLCJleHAiOjE2NzkyMDM5OTF9.wHofmht1OSrIOtZiPXhU3Yx2SPOhhGxE-76PDO3xBYg",
+								"type": "default"
+							}
+						],
+						"url": "localhost:3001/api/list-category"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "PRODUCTO",
+			"item": [
+				{
+					"name": "CREAR PRODUCTO",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "nameProduct",
+									"value": "Desarmador",
+									"type": "default"
+								},
+								{
+									"key": "price",
+									"value": "20",
+									"type": "default"
+								},
+								{
+									"key": "productType",
+									"value": "Herramientas",
+									"type": "default"
+								},
+								{
+									"key": "stock",
+									"value": "10",
+									"type": "default"
+								}
+							]
+						},
+						"url": "localhost:3001/api/create-product"
+					},
+					"response": []
+				},
+				{
+					"name": "PRODUCTO POR SU NOMBRE",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "nameProduct",
+									"value": "Desarmador",
+									"type": "default"
+								}
+							]
+						},
+						"url": "localhost:3001/api/search-product"
+					},
+					"response": []
+				},
+				{
+					"name": "EDITAR PRODUCTO",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "nameProduct",
+									"value": "Alicate",
+									"type": "default"
+								}
+							]
+						},
+						"url": "localhost:3001/api/update-product/640d6b01ad419e9232b95107"
+					},
+					"response": []
+				},
+				{
+					"name": "STOCK PRODUCTO",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "localhost:3001/api/stock-product"
+					},
+					"response": []
+				},
+				{
+					"name": "LISTAR PRODUCTO",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "localhost:3001/api/list-products"
+					},
+					"response": []
+				},
+				{
+					"name": "ELIMINAR PRODUCTO",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "localhost:3001/api/delete-product/640d6b01ad419e9232b95107"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "CARRITO COMPRAS",
+			"item": [
+				{
+					"name": "CREAR CARRITO",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "user",
+									"value": "640d641711fd2be430c10add",
+									"type": "default"
+								},
+								{
+									"key": "producto",
+									"value": "Alicate",
+									"type": "default"
+								},
+								{
+									"key": "quantity",
+									"value": "2",
+									"type": "default"
+								}
+							]
+						},
+						"url": "localhost:3001/api/create-carrito"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
